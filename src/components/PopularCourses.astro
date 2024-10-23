@@ -1,0 +1,59 @@
+---
+import CourseCard from "./CourseCard.astro";
+const popularCourses = [
+  {
+    title: "Bootcamp de Desarrollo Web",
+    description: "Aprende desarrollo web full-stack desde cero con las tecnologías más demandadas del mercado. HTML, CSS, JavaScript, React y Node.js.",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    category: "Programación",
+    price: "$99",
+    rating: 5,
+    learningPoints: [
+      "Domina HTML5, CSS3 y JavaScript moderno",
+      "Construye aplicaciones web completas",
+      "Aprende las mejores prácticas de la industria",
+      "Desarrolla un portafolio profesional"
+    ]
+  },
+  {
+    title: "Marketing Digital Masterclass",
+    description: "Domina las estrategias modernas de marketing digital y aprende a crear campañas efectivas en redes sociales, SEO y email marketing.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    category: "Marketing",
+    price: "$79",
+    rating: 4,
+    learningPoints: [
+      "Estrategias avanzadas de SEO",
+      "Marketing en redes sociales",
+      "Email marketing efectivo",
+      "Análisis de datos y métricas"
+    ]
+  },
+  {
+    title: "Fundamentos de Data Science",
+    description: "Inicia tu viaje en la ciencia de datos aprendiendo Python, análisis estadístico y visualización de datos con herramientas modernas.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    category: "Data Science",
+    price: "$89",
+    rating: 5,
+    learningPoints: [
+      "Python para análisis de datos",
+      "Estadística aplicada",
+      "Visualización de datos",
+      "Machine Learning básico"
+    ]
+  }
+];
+---
+
+
+<section class="py-20 bg-gray-50" id="courses">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Cursos Populares</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {popularCourses.map(course => (
+          <CourseCard {...course} />
+        ))}
+      </div>
+    </div>
+  </section>

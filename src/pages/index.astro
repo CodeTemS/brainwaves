@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import CourseCard from '../components/CourseCard.astro';
+import CourseModal from '../components/CourseModal.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import Categories from '../components/Categories.astro';
+import PopularCourses from '../components/PopularCourses.astro';
+import Features from '../components/Features.astro';
+import Newsletter from '../components/Newsletter.astro';
+
+---
+
+<Layout title="LearnHub - Encuentra tu Curso Perfecto">
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <Hero />
+
+  <!-- Categories Section -->
+  <Categories />
+
+  <!-- Popular Courses Section -->
+  <PopularCourses />
+
+  <!-- Features Section -->
+  <Features />
+
+  <!-- Newsletter Section -->
+  <Newsletter />
+
+  <!-- CEO Section -->
+  <Footer />
+
+  <!-- Course Modal -->
+  <CourseModal id="course-modal" />
+</Layout>
+
+<script>
+  import AOS from 'aos';
+  import 'aos/dist/aos.css';
+  
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+</script>
